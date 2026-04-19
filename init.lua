@@ -3,7 +3,7 @@ require("config")
 require("plugins")
 require("keymap")
 
-vim.cmd.colorscheme "catppuccin-macchiato"
+vim.cmd.colorscheme "bamboo-vulgaris"
 
 vim.filetype.add({
   extension = {
