@@ -8,14 +8,20 @@ require("bamboo").setup()
 
 -- LUALINE
 vim.pack.add({
-	"https://github.com/nvim-tree/nvim-web-devicons",
-    "https://github.com/nvim-lualine/lualine.nvim"
+  "https://github.com/nvim-tree/nvim-web-devicons",
+  "https://github.com/nvim-lualine/lualine.nvim"
 })
-require("lualine").setup()
+require("lualine").setup({ 
+  options = { 
+      theme  = "everforest", 
+      icons_enabled = false
+    } 
+  }
+)
 
 -- FZF LUA
 vim.pack.add({
-    { src = "https://github.com/ibhagwan/fzf-lua" },
+  { src = "https://github.com/ibhagwan/fzf-lua" },
 })
 
 local actions = require('fzf-lua.actions')
