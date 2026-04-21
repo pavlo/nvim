@@ -1,6 +1,3 @@
-
---vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } }
-
 vim.pack.add { { 
 	src = "https://github.com/ribru17/bamboo.nvim" } 
 }
@@ -51,7 +48,8 @@ require('fzf-lua').setup({
     }
 })
 
--- BLINK
+-- blink.cmp is a completion plugin with support for LSPs, cmdline, signature help, and snippets.
+-- It uses an optional custom fuzzy matcher for typo resistance.
 vim.pack.add({
     { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1") },
 })
@@ -94,14 +92,12 @@ require('blink.cmp').setup({
     sources = { default = { 'lsp', 'buffer', 'snippets', 'path' } }
 })
 
-
+-- flash.nvim lets you navigate your code with search labels, enhanced character motions, and Treesitter integration.
 vim.pack.add({
     { src = "https://github.com/folke/flash.nvim" },
 })
--- Просто setup без кастомних опцій (дефолти вже хороші)
 require("flash").setup()
 
--- Кейбіндінги задаються окремо
 vim.keymap.set({ "n", "x", "o" }, "s", function()
   require("flash").jump()
 end, { desc = "Flash jump" })
